@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of Built-in object (Arraay)</title>
+</head>
+<body>
+    <script>        
+        
+        const fruits = ['apple', 'orange', 'grape', 'peach'];
+        console.log(fruits);    // Array(4)0: "apple"1: "orange"2: "grape"3: "peach"length: 4
+        console.log(typeof fruits); // object
+        console.log(toString.call(fruits)); // [object Array] 
+        
+        console.log("fruits의 길이 : ", fruits.length); // fruits의 길이 :  4
+
+        for(const fruit of fruits){
+            console.log(fruit);            
+        }
+
+        console.log("---------------------------------------");
+        
+        for(let i = 0; i < fruits.length; i ++){
+            console.log(fruits[i]);            
+        }
+
+        console.log("---------------------------------------");
+        
+        // forEach는 return type이 void 이기에 로직 안에 return을 사용하면 안된다.
+        fruits.forEach((value) => {
+            console.log(value);            
+        });
+
+        console.log("---------------------------------------");
+
+        // fruits 배열 요소 끝에 요소를 추가한다.
+        // fruits.push("melon");
+        // fruits.push("kiwi");
+
+        fruits.push("melon", "kiwi");
+        console.log(fruits.join(',')); // apple,orange,grape,peach,melon,kiwi
+
+        // fruits 배열 맨 앞에 Blueberry 요소 추가
+        fruits.unshift("Blueberry");
+        console.log(fruits.join(',')); // Blueberry,apple,orange,grape,peach,melon,kiwi
+        
+        // 맨 앞의 요소 제거
+        fruits.shift();
+        console.log(fruits.join(',')); // apple,orange,grape,peach,melon,kiwi
+        
+        // 맨 뒤의 요소 제거
+        fruits.pop();
+        console.log(fruits.join(',')); // apple,orange,grape,peach,melon
+        //fruits.push(["melon", "kiwi"]); 시 melon과 kiwi가 배열로 들어가기에 동시에 삭제 되어버림
+        //console.log(fruits.join(',')); // apple,orange,grape,peach
+
+    </script>
+</body>
+</html>

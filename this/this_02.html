@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of This</title>
+</head>
+<body>
+    <script>
+        // 객체 리터럴을 이용한 객체 생성
+        const person = {
+            userName : "Alice",
+            age : 20,
+            // 구 버전 function keyword 존재
+            // getPerson : function() { // method
+            //     console.log(this); // Object 출력 / 해당 객체인 Person       
+            //     console.log(this.userName); // Alice 출력 / 해당 객체인 Person 의 이름      
+            //     console.log(this.age); // 20 출력 / 해당 객체인 Person 의 나이
+            // }
+
+            // 신 버전 function keyword 미 존재
+            getPerson() { // method
+                console.log(this); // Object 출력 / 해당 객체인 Person       
+                console.log(this.userName); // Alice 출력 / 해당 객체인 Person 의 이름      
+                console.log(this.age); // 20 출력 / 해당 객체인 Person 의 나이
+            }
+        };
+
+        person.getPerson();
+
+        const person2 = {
+            name : "Min",
+            age : 40,
+            getPerson2 : function () {
+                return this.name, this.age;
+            }
+        }
+        console.log(person2.getPerson2());
+         
+
+    </script>
+</body>
+</html>

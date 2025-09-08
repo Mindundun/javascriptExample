@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of Nested function</title>
+</head>
+<body>
+    <script>
+        // 외부 함수 선언
+        function outer(){
+            // local Variable
+            const prefix = 'Hello, ';
+
+            // 내부 함수 선언
+            function inner(username){
+                return prefix + username;
+            }
+            return inner; //inner 함수 반환
+        }
+        
+        const innerFunc = outer();
+        console.log(innerFunc); // innerFunction 로직 출력
+        
+        console.log(typeof innerFunc); // function 출력
+        console.log(toString.call(innerFunc)); // object Function 출력
+        
+        console.log(innerFunc("민둔")); // Hello, 민둔 출력
+        console.log(outer()("민둔22")); // Hello, 민둔22 출력        
+    </script>
+</body>
+</html>

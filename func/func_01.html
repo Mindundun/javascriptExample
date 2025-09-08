@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of function</title>
+</head>
+<body>
+    <script>
+        // 함수는 호이스팅이 되어 기존과 같이 Hello, 민둔 출력된다.
+        const str1 = hello("민둔"); // 민둔은 아규먼트, 인자라고 불림
+        console.log(str1);
+
+        // 함수 선언문
+        function hello(username){ // username은 매개변수, 파라미터로 불림
+	        return "Hello, " + username; // Hello, 민둔 리턴
+        }
+
+        const str = hello("민둔"); // 민둔은 아규먼트, 인자라고 불림
+        console.log(str);
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of Closure</title>
+</head>
+<body>
+    <button id = "btn" type="button">Click</button>
+    <div id ="div"></div>
+    <script>
+        
+        const btn = document.getElementById("btn");
+        const div = document.getElementById("div");
+
+        let cnt = 1;
+
+        // btn.addEventListener("click", function()  { // 콜백함수
+        //     alert("Click!!");
+        // });
+
+        btn.addEventListener("click", function()  {
+            div.innerHTML = `Cnt is ${cnt++}`;
+        });
+        
+        cnt = 100; // 맨 밑에 대입했지만 호이스팅으로 인하여 위의 btn.addEventListener에서 100이 시작숫자가 되어버림
+    </script>
+</body>
+</html>

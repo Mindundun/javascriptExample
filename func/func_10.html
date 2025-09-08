@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of Closure</title>
+    <style>
+        #div{
+            margin-top: 20px;
+            width: 300px;
+            height: 300px;
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <button id = "btn" type="button">Toggle</button>
+    <div id ="div"></div>
+    <script>
+        
+        const btn = document.getElementById("btn");
+        const div = document.getElementById("div");
+
+        const show = (function (){
+            let isShow = true; 
+        
+        if (isShow == false){ 
+                isShow = true;
+                document.getElementById("div").style.visibility = "visible";
+                
+            } else {
+                isShow = false;
+                document.getElementById("div").style.visibility = "hidden";
+                                
+            }
+        })();
+        
+
+        btn.addEventListener("click", function (){
+            show();
+        });
+        
+    </script>
+</body>
+</html>

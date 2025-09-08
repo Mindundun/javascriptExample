@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of Built-in object (Arraay)</title>
+</head>
+<body>
+    <script>        
+        
+        const fruits = ['apple', 'orange', 'grape', 'peach'];
+    
+        // 기본 문법
+        // fruits.splice(startIndex, deleteCnt, item1, item2, ...)
+
+        fruits.splice(2, 0, "melon", "banana");
+        console.log(fruits.join(','));      // apple,orange,melon,banana,grape,peach 
+
+        fruits.splice(1,2);
+        console.log(fruits.join(','));      // apple,banana,grape,peach
+        
+
+
+        const intArray = [1, 5, 2, 10, 7];
+        console.log(intArray.sort()); // [1, 10, 2, 5, 7]
+        
+    </script>
+</body>
+</html>

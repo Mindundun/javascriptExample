@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of Built-in object (String)</title>
+</head>
+<body>
+    <script>        
+        
+        const date = '2025-09-05';
+        
+        console.log(date.split('-'));        // 배열 객체 리턴 : ['2025', '09', '05']
+
+        const dateArr = date.split('-');
+        console.log("year :", dateArr[0]);   // year : 2025
+        console.log("month :", dateArr[1]);  // month : 09
+        console.log("day :", dateArr[2]);    // day : 05    
+        
+        const str = ' ha . . 피곤해  ';
+        console.log(str.length);             // 13 출력
+        console.log(str.trim());
+        console.log(str.trim().length);      // 10 출력        
+
+    </script>
+</body>
+</html>

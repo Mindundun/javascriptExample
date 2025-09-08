@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of This</title>
+</head>
+<body>
+    <script>
+        function add(a, b, callback){
+            console.log('a :', a); // 1
+            console.log('b :', b); // 2
+            console.log('callback :', callback); // 아래의 익명의 함수로 출력 (함수이름 없이)
+            
+            const result = a + b;
+            callback(result);
+        }        
+
+        // ES6 Arrow Function
+        add(1, 2, (value) => {
+            console.log('this :', this); // 화살표 함수 내 this는 window 객체를 말함
+            console.log('value :', value);
+        });
+    </script>
+</body>
+</html>

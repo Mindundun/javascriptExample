@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of Closure</title>
+</head>
+<body>
+    <button id = "btn" type="button">Click</button>
+    <div id ="div"></div>
+    <script>
+        
+        const btn = document.getElementById("btn");
+        const div = document.getElementById("div");
+
+        // 즉시 실행 함수
+        const increase = (function () { // 항상 1이 출력돼
+            let cnt = 1;
+
+            return function () { // 내부함수
+                div.innerHTML = `Cnt is ${cnt++}`;
+            }
+            
+        })();      
+
+        // btn.addEventListener("click", function()  { // 콜백함수
+        //     alert("Click!!");
+        // });
+
+        btn.addEventListener("click", function()  {
+            increase(); // 외부함수 내 내부함수 호출하고자
+            // const func = increase;
+            // console.log(func); // 내부함수 인 div.innerHTML의 로직 출력
+
+
+        });       
+        
+    </script>
+</body>
+</html>

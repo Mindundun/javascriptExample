@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of This binding</title>
+</head>
+<body>
+    <script>        
+        
+        const apple = {
+            name : "사과"
+        }
+
+        const banana = {
+            name : "바나나"
+        }
+
+        function update(color, price){
+            this.color = color; // 여기의 this는 window 객체를 가지고 있음
+            this.price = price;
+        }
+
+        function whatIsThis() {
+            console.log("this : ", this); //Window 객체 출력
+        }
+
+        whatIsThis();
+
+        whatIsThis.call(apple);     // 사과의 객체 출력 -> { name : "사과" }
+        whatIsThis.apply(banana);   // 바나나의 객체 출력 -> { name : "바나나" }
+
+        // call은 개별로 전달
+        update.call(apple, 'red', 1000);    // 사과 객체의 color와 price를 red와 1000원으로 변경
+        console.log(apple);                 // 사과 객체의 color와 price 호출 -> {name: '사과', color: 'red', price: 1000}
+        
+        // apply는 array로 전달
+        update.apply(banana, ['노랑', 2000]); // 바나나 객체의 color와 price를 노랑 2000원으로 변경
+        console.log(banana);                  // 바나나 객체의 color와 price 호출 -> {name: '바나나', color: '노랑', price: 2000}
+
+        const update1 = update.bind(apple);
+        update1('빨강', 5000);
+        console.log(apple);                 // 사과 객체 출력 -> {name: '사과', color: '빨강', price: 5000}
+        console.log(update1);               // update의 내부 함수 구문이 출력되어버려~!
+        
+    </script>
+</body>
+</html>

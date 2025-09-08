@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of function</title>
+</head>
+<body>
+    <script>
+        // console.log(typeof printUserInfo1); // Uncaught ReferenceError: Cannot access 'printUserInfo1' before initialization
+        // console.log(toString.call(printUserInfo1));
+        // console.log(printUserInfo1); // function 객체 자체를 출력하기에 위의 function구문 출력
+
+        // 이름과 이메일을 전달하면 콘솔에 출력하는 함수를 구현
+        function printUserInfo(name, email){
+            console.log("이름은", name,",", "이메일은", email,"입니다.");         
+            console.log(`이름은 ${name}, 이메일은 ${email} 입니다.`);  
+            //return; 생략   
+        }
+
+        // 함수 리터럴을 이용한 함수 생성
+        const printUserInfo1 = function (name, email){
+                                console.log("이름은", name,",", "이메일은", email,"입니다.");         
+                                console.log(`이름은 ${name}, 이메일은 ${email} 입니다.`);  
+                                //return; 생략   
+                            }
+
+        printUserInfo("민둔","pmkGetJava@naver.com");
+        console.log("-------------------------------");
+        printUserInfo1("민둔1","pmkGetJava1@naver.com")
+        console.log(typeof printUserInfo1);
+        console.log(toString.call(printUserInfo1));
+        console.log(printUserInfo1); // function 객체 자체를 출력하기에 위의 function구문 출력
+        
+    </script>
+</body>
+</html>

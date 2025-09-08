@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of This</title>
+</head>
+<body>
+    <button id = "btn" type="button">Click</button>
+    <script>        
+        const btn = document.getElementById("btn");
+        
+        // btn.addEventListener("click", function()  {
+        //     console.log(this);     // <body> 내 <button> 객체 출력 : <button id = "btn" type="button">Click</button>
+        //     console.log(this.id);  // btn의 id인 btn 출력 : <button id = "btn"
+        // });     
+        
+        // btn.addEventListener("click", () => {
+        //     console.log(this);     // Window 객체 출력
+        //     console.log(this.id);  // undefined 출력
+        // });  
+        
+        btn.addEventListener("click", (e) => {
+            console.log(this);     // Window 객체 출력
+            console.log(this.id);  // undefined 출력
+            console.log(e.target); // <body> 내 <button> 객체 출력 : <button id = "btn" type="button">Click</button>
+        }); 
+
+    </script>
+</body>
+</html>
