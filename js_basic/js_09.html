@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples For hoisting</title>
+</head>
+<body>
+    <script>
+        // 1. console.log('str : ', str); // undefined        
+        // 2. var str = 'Hello, ';
+        
+        // 위의 1, 2번 풀어낸 것
+        var str = undefined;
+        console.log('str : ', str); // undefined
+        str = "Hello, ";
+        
+    </script>
+</body>
+</html>

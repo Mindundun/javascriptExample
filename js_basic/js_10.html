@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples For hoisting</title>
+</head>
+<body>
+    <script>        
+        //console.log(str); // Uncaught ReferenceError: str is not defined
+
+        // 함수 선언
+        function hello(username){
+            console.log(str);   // undefined    
+
+            var str = 'hello, ';
+
+            console.log(str + username);            
+        }
+        
+        // 함수 호출
+        hello('민둔');
+    </script>
+</body>
+</html>

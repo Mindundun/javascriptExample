@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of condition statement</title>
+</head>
+<body>
+    <script>        
+        const score = 75;
+
+        switch (parseInt(score / 10)) { // 75 / 10 = 7.5 이나 parseInt 로 인해 7
+            case 10:
+                console.log('A+');                
+                break;
+            case 9:
+                console.log('A');                
+                break;
+            case 8:
+                console.log('B');                
+                break;
+            case 7:
+                console.log('C');                
+                break;
+            case 6:
+                console.log('D');                
+                break;
+            default:
+                console.log('F');   
+                break;
+        }
+    </script>
+</body>
+</html>

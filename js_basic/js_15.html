@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of operator</title>
+</head>
+<body>
+    <script>        
+        // 논리 연산자
+        // falsy : false, 0, -0, undefined, null, NaN, '' -> 7개
+        const a = true;
+
+        console.log(a || 8);    // true
+        console.log(3 || 4);    // 3
+        console.log(false || 8);// 8
+        console.log(0 || 9);    // 9
+        console.log(null || 5); // 5       
+
+        function hello(username){
+            username = username || '밥밥디라라'; // 단축 평가 활용
+            return 'Hello, ' + username;
+        }
+
+        console.log(hello('민둔'));  // Hello, 민둔
+        console.log(hello());       // Hello, undefined (function에 username 대입하지 않을 때), Hello, 밥밥디라라 (function에 username 대입 시)
+        console.log(hello(''));     // Hello,           (function에 username 대입하지 않을 때), Hello, 밥밥디라라 (function에 username 대입 시)
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples For DataType</title>
+</head>
+<body>
+    <script>
+        // 함수
+        function hello(username){
+            return 'Hello, ' + username;
+        }
+
+        // 객체
+        const member = {
+            email: "pmkGetJava@naver.com",
+            age:10
+        }
+
+        // 배열
+        const colors = ['red', 'orange', 'blue'];
+
+        let isMarried = false;
+        let age;
+        let username = '민둔';
+        let height = 180;
+
+        console.log(isMarried);
+        console.log(age);
+        console.log(username);
+        console.log(height);
+
+        console.log(typeof isMarried);
+        console.log(typeof age);
+        console.log(typeof username);
+        console.log(typeof height);
+
+        
+        console.log("------------------------------------");
+
+        console.log('hello function : ', hello);
+        console.log('hello function dataType: ', typeof hello);
+        console.log('객체타입 : ' + toString.call(hello));
+        
+        console.log('member : ', member);
+        console.log('member dataType: ', typeof member);
+        console.log('객체타입 : ' + toString.call(member));
+
+        console.log('colors : ', colors);
+        console.log('colors dataType: ', typeof colors);
+        console.log('객체타입 : ' + toString.call(colors));
+    </script>
+</body>
+</html>
