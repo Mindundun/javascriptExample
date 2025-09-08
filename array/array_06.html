@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of Built-in object (Array)</title>
+</head>
+<body>
+    <script>        
+        
+        const colors = ['red', 'orange', 'pink', 'blue', 'gray'];
+
+        const result = colors.map((color) => {
+            return color.toUpperCase();
+        });
+
+        result.forEach(color => {console.log(`color : ${color}`);});
+
+        console.log('원본배열------------------------------');
+        
+        colors.forEach(color => {console.log(`color : ${color}`);});
+
+    </script>
+</body>
+</html>

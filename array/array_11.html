@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of Built-in object (Array)</title>
+</head>
+<body>
+    <script>        
+        
+        const intArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        
+        let result = intArr.reduce((prev, curr, index) => {
+            console.log(`prev : ${prev}, curr : ${curr}, index : ${index}`);
+            
+            return prev + curr;
+        }, 0); // prev에 0으로 초기화
+
+        console.log(result);    // 55 출력
+
+    </script>
+</body>
+</html>

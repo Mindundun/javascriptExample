@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of Built-in object (Array)</title>
+</head>
+<body>
+    <script>        
+        
+        const users = [
+            {firstname : '길동', lastname : '일', age : 10},
+            {firstname : '길동', lastname : '이', age : 20},
+            {firstname : '길동', lastname : '삼', age : 30},
+            {firstname : '길동', lastname : '사', age : 40},
+            {firstname : '길동', lastname : '오', age : 50}
+        ]
+
+        const fullUsers = users.map(user => {
+            return {fullname : `${user.lastname}${user.firstname}`, 
+                    age : `${user.age}`
+            }
+        });
+
+        fullUsers.forEach(user => {
+            console.log(`${user.fullname}, ${user.age}`);
+        });  
+        
+    </script>
+</body>
+</html>

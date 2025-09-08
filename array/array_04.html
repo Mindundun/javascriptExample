@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of Built-in object (Arraay)</title>
+</head>
+<body>
+    <script>        
+        
+        const colors = ['red', 'orange', 'pink', 'blue', 'Gray'];
+
+        //forEach  메소드
+        colors.forEach(color => {console.log(color);});
+
+        console.log('----------------------------------');
+        
+        colors.forEach(function(value, index, array) {
+            console.log(`value : ${value}, index : ${index}`);            
+        });
+
+        console.log('----------------------------------');
+
+        colors.forEach((value, index, array) => {
+            console.log(`value : ${value}, index : ${index}`);            
+        });
+
+
+    </script>
+</body>
+</html>

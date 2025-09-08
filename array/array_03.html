@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of Built-in object (Array)</title>
+</head>
+<body>
+    <script>        
+        
+        // 배열 리터럴을 이용한 배열 객체 생성
+        const users = [
+            {username : '일길동', age : 10},
+            {username : '이길동', age : 20},
+            {username : '삼길동', age : 30},
+            {username : '사길동', age : 40},
+            {username : '오길동', age : 50}
+        ]
+
+        // for 문을 이용하여 배열 요소의 내용을 출력 
+        for(let i = 0; i < users.length; i++){
+            console.log(`username : ${users[i].username}, userage : ${users[i].age}`);            
+        }
+
+        console.log('-------------------------------------------------------');
+        
+        // for - of 구문을 이용한 배열 요소의 내용을 출력
+        for(let user of users){
+            console.log(`username : ${user.username}, userage : ${user.age}`);       
+        }
+
+        console.log('-------------------------------------------------------');
+
+        // forEach문을 이용한 배열 요소의 내용을 출력
+        // forEach는 Consumer 함수로 매개변수를 받으면 return을 하지 않음. 그래서 forEach문에서 return을 할 수 없음.
+        users.forEach(user => {console.log(`username : ${user.username}, userage : ${user.age}`);});
+
+    </script>
+</body>
+</html>

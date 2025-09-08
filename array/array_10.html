@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of Built-in object (Array)</title>
+</head>
+<body>
+    <script>        
+        
+        const intArr = [1, 20, 15, 10, 8, 25];
+        
+        let result = intArr.every(num => {
+            return num < 10;
+        });
+
+        console.log(result);    // false 출력
+
+        result = intArr.some(num => {
+            return num < 10;
+        });
+        
+        console.log(result);    // true 출력
+
+    </script>
+</body>
+</html>
