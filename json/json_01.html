@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of Built-in object(JSON)</title>
+</head>
+<body>
+    <script>        
+        // json 객체
+        const user = {
+            "username" : 'Alice',
+            "age" : 10,
+            "email" : 'java@gmail.com'
+        };
+
+        console.log(typeof user);           // object 출력
+        console.log(toString.call(user));   // [object Object] 출력
+
+        console.log(user.username);         // Alice 출력
+        console.log(user['username']);      // Alice 출력
+
+        // const user 자체는 못바꾸지만 안에 속성은 변경 가능
+        user['username'] = 'John';
+        console.log(user['username']);      // John 출력        
+        
+
+        const jsonStr = JSON.stringify(user);
+        console.log(typeof jsonStr);        // string 출력
+        console.log(toString.call(jsonStr));// [object String] 출력    
+        console.log(jsonStr);               // {"username":"John","age":10,"email":"java@gmail.com"}    
+        console.log(jsonStr.username);      // undefined : json 형태라 접근할 수 없음
+
+        console.log('------------------------');
+        
+        const jsonObj = JSON.parse(jsonStr);
+        console.log(typeof jsonObj);        // object 출력
+        console.log(toString.call(jsonObj));// [object Object] 출력    
+        console.log(jsonObj);               // {username: 'John', age: 10, email: 'java@gmail.com'}
+        console.log(jsonObj.username);      // John
+        
+    </script>
+</body>
+</html>

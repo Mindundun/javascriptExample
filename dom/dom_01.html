@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of DOM (Document Object Model)</title>
+</head>
+<body>  
+    <p id = "p1">First.</p>   
+    <p id = "p2">Second.</p>   
+    <p id = "p3">p태그입니다.</p>   
+
+    <script>        
+        
+        const pElement = document.getElementById('p2');
+
+        console.log('pElement : ', pElement);                           // pElement :  <p id=​"p2">​Second.​</p>​
+        console.log('pElement.nodeName : ', pElement.nodeName);         // pElement.nodeName :  P(대문자)
+        console.log('pElement.tagName : ', pElement.tagName);           // pElement.tagName :  P(대문자)
+        console.log('pElement.nodeType : ', pElement.nodeType);         // pElement.nodeType :  1 : Element
+        console.log('pElement.id : ', pElement.id);                     // pElement.id :  p2
+        console.log('pElement.textContent : ', pElement.textContent);   // pElement.textContent :  Second.        
+        console.log('pElement.firstChild : ', pElement.firstChild);     // pElement.firstChild :  "Second."
+
+    </script>
+</body>
+</html>

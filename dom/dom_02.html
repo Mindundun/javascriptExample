@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of DOM (Document Object Model)</title>
+    <style>
+        .red{
+
+        }
+
+        .blue{
+            color : blue;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>  
+    <ul>
+        <li class = 'red'>Apple</li>
+        <li class = 'red'>Banana</li>
+        <li class = 'red'>Cherry</li>
+        <li class = 'red'>Shine musket</li>
+    </ul>
+    <script>        
+        const elems = document.getElementsByClassName('red'); // getElementsByClassName()은 Live Collection을 반환함
+
+        console.log(toString.call(elems)); // [object HTMLCollection]
+
+        for(let elem of elems){
+            //elem.style.color = 'blue'; 모두 파랑
+            elem.className = 'blue';
+        }
+        // 퐁당 퐁당 되는 이유 : 첫번째는 변경되나, 변경된 값은 조회되지 않고 남은 3개만 처리 되어야함.
+        // 남은 3개 중 1번째가 처리되어야 하니까.
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of Built-in object (Math)</title>
+</head>
+<body>    
+    <script>        
+        // Math.random() : 0 ~ 9 까지 난수 생성
+        // 1 ~ 10 사이의 정수를 생성
+        for (let i = 1; i <= 100; i++){
+            let cnt = Math.floor((Math.random()) * 10) + 1;
+            console.log(cnt);            
+        }
+
+        console.log('--------------------------------------');
+        
+        // 10 ~ 50 사이의 임의의 정수를 생성
+        for (let i = 1; i <= 100; i++){
+            let cnt = Math.trunc(((Math.random()) * 100)/2) + 1;
+            //let cnt = Math.trunc(((Math.random()) * 41) + 10;
+            console.log(cnt);            
+        }
+    </script>
+</body>
+</html>

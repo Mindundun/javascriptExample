@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of Built-in object (Array)</title>
+</head>
+<body>
+    <script>        
+        
+        const str = 'banana';
+        const arr = str.split('');
+
+        console.log('arr : ', toString.call(arr));  // arr :  [object Array] 출력
+        console.log(arr.join(','));                 // b,a,n,a,n,a 출력
+        
+        const result = arr.filter( value => {
+            return value === 'a'; // 타입과 값을 다 비교함 ===
+        });
+
+        console.log(result.length); // 3 출력
+        
+        //console.log(str.split('a').length -1);
+
+    </script>
+</body>
+</html>

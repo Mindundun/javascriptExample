@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of Built-in object (Date)</title>
+</head>
+<body>
+    
+    <div id="div"></div>
+
+    <script>        
+        
+        // Date 객체 생성
+        const now = new Date();
+
+        const year = now.getFullYear();
+        const month = now.getMonth() + 1;
+        const date = now.getDate();
+        const hour = now.getHours();
+        const minute = now.getMinutes();
+        const day = now.getDay();
+
+        console.log(now);   // Mon Sep 08 2025 11:28:57 GMT+0900 (한국 표준시) 출력
+        console.log(`${year}-${month}-${date}  ${hour}:${minute} ${day}`);  // 2025-9-8  11:28 1 출력
+        
+        // getDay()
+        // 일 : 0, 월 : 1, 화 : 2, 수 : 3, 목 : 4, 금 : 5, 토 : 6        
+
+        const divElement = document.getElementById("div");
+        divElement.innerHTML = `${year}-${month}-${date}  ${hour}:${minute} ${day}`;
+
+        const dayName = ['일', '월', '화', '수', '목', '금', '토'];
+        console.log(`${year}-${month}-${date}  ${hour}:${minute} ${dayName[day]}`); // 2025-9-8  11:34 월 출력
+
+    </script>
+</body>
+</html>

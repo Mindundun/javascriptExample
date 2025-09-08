@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of BOM (window)</title>
+</head>
+<body>
+    <button id = "goBtn">Google</button>
+    <button id = "reloadBtn">새로고침</button>    
+    <script>        
+        
+        const goBtn = document.getElementById("goBtn");
+        const reloadBtn = document.getElementById("reloadBtn");
+
+        goBtn.addEventListener("click", () => {
+            //location.href = 'https://www.google.com';
+            location.assign('https://www.google.com');
+            //location.replace('https://www.google.com'); // 구글 이동 후 뒤로가기 불가
+        });
+
+        reloadBtn.addEventListener("click", () => {
+            location.reload();  // 새로고침
+        });
+
+    </script>
+</body>
+</html>

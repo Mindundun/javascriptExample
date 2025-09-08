@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of BOM (window)</title>
+</head>
+<body>
+    <div id ="datetime"></div>
+        <button id = "startbtn">Start</button>
+        <button id = "stopbtn">Stop</button>
+    
+    <script>        
+        const div = document.getElementById('datetime');
+        const startbtn = document.getElementById('startbtn');
+        const stopbtn = document.getElementById('stopbtn');
+        let timerId = null;
+        
+        startbtn.addEventListener("click", () => {
+            showDateTime();
+            timerId = setInterval(showDateTime, 1000);
+        });
+
+        stopbtn.addEventListener("click", () => {
+            if (timerId){
+                clearInterval(timerId);
+            }
+        });
+
+        function showDateTime() {
+            const now = new Date();
+            let htmlStr = '<p>';
+            htmlStr += `${now.getFullYear()}/${now.getMonth() + 1}/${now.getDate()} `;
+            htmlStr += `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
+            htmlStr += '</p>';
+            div.innerHTML = htmlStr;
+        }
+
+    </script>
+</body>
+</html>
