@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of DOM (Document Object Model)</title>
+</head>
+<body>  
+    <p>Hello</p>
+    <p>Hi</p>
+    <script>        
+        const pElements = document.getElementsByTagName('p');
+        console.log(toString.call(pElements));  //[object HTMLCollection]
+        
+        Array.from(pElements).forEach(element => { // <p>가 2개라서 2번 반복
+            console.log(element.tagName);       // P
+            console.log(element.nodeName);      // P
+            console.log(element.nodeType);      // 1 : Element type
+
+            console.log(element.firstChild.nodeValue);
+            
+            console.log("-------------------------------");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of DOM (Document Object Model)</title>
+</head>
+<body>  
+    <button id="btn">아이템 추가</button>
+    <div id="div"></div>
+    <script>        
+
+        const btn = document.getElementById('btn');
+        const div = document.getElementById('div');
+
+        let count = 1;
+
+        // 버튼 클릭 시 div에 아래방향으로 (동적) item - cnt 출력 
+        btn.addEventListener('click', () => {
+            const pElement = document.createElement('p');
+            const textNode = document.createTextNode(`item-${count++}`);
+
+            pElement.appendChild(textNode);
+            div.appendChild(pElement);
+        });
+        
+    </script>
+</body>
+</html>

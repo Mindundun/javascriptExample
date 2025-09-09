@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of DOM (Document Object Model)</title>
+</head>
+<body>  
+    
+    <div id="div"><p>1</p><p>2</p><p>3</p></div>
+    <script>        
+        const div = document.getElementById('div');
+
+        const pElement = document.createElement('p');
+        const textNode = document.createTextNode('One');
+        pElement.appendChild(textNode);
+
+        div.replaceChild(pElement, div.firstChild); // <p>1</p>가 <p>One</p>로 바뀜
+        
+    </script>
+</body>
+</html>

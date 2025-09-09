@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of DOM (Document Object Model)</title>
+</head>
+<body>  
+    <button id="btn">아이템 추가</button>
+    <div id="div"></div>
+    <script>        
+
+        const btn = document.getElementById('btn');
+        const div = document.getElementById('div');
+
+        let count = 1;
+
+        // 버튼 클릭 시 div에 (동적) item - cnt 출력 
+        // btn.addEventListener('click', () => {
+        //     const pElement = document.createElement('p');
+        //     const textNode = document.createTextNode(`item-${count++}`);
+
+        //     pElement.appendChild(textNode);
+        //     div.insertBefore(pElement, div.firstChild);
+        // });
+
+        btn.addEventListener('click', () => {
+            const pElement = document.createElement('p');
+            const textNode = document.createTextNode(`item-${count++}`);
+
+            pElement.appendChild(textNode);
+
+            // 맨 위에 추가될 수 있도록 동작 하되, 처음에는 아예 없으니 분기처리
+            if (div.firstChild == null){
+                div.appendChild(pElement);
+            } else {
+                div.insertBefore(pElement, div.firstChild);
+            }            
+        });
+        
+    </script>
+</body>
+</html>

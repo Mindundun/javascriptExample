@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of DOM (Document Object Model)</title>
+</head>
+<body>  
+    
+    <div id="div"><p>1</p><p>2</p><p>3</p></div>
+    <script>        
+        const div = document.getElementById('div');
+
+        // div.removeChild(div.firstChild);                      // <p>1</p>가 삭제됨
+        // div.removeChild(div.lastChild);                       // <p>3</p>가 삭제됨
+        //div.removeChild(div.firstChild.nextSibling);           // <p>2</p>가 삭제됨
+        //div.removeChild(div.firstChild.nextSibling.nextSibling); // <p>3</p>가 삭제됨
+        div.removeChild(div.lastChild.previousSibling);         // <p>2</p>가 삭제됨
+
+        console.log('div.innterHTML : ', div.innerHTML);    // div.innterHTML :  
+        
+    </script>
+</body>
+</html>

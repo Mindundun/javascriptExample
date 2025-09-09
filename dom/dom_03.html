@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of DOM (Document Object Model)</title>
+    <style>
+        .red{
+
+        }
+
+        .blue{
+            color : blue;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>  
+    <ul>
+        <li class = 'red'>Apple</li>
+        <li class = 'red'>Banana</li>
+        <li class = 'red'>Cherry</li>
+        <li class = 'red'>Shine musket</li>
+    </ul>
+    <script>        
+        const result = document.querySelectorAll('.red');
+        console.log('result : ', toString.call(result));    // result :  [object NodeList]
+        
+        console.log(Array.isArray(result));             // false
+        console.log(Array.isArray(Array.from(result))); // true
+        console.log(Array.isArray([...result]));        // true
+        
+        Array.from(result).forEach(element => {
+            element.className = 'blue';                 // 화면에 모든 li들이 다 파란색으로 변경
+        });
+        
+    </script>
+</body>
+</html>
