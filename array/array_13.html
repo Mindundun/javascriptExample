@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of Built-in object (Array)</title>
+</head>
+<body>
+    <script>        
+        
+        // 1. 배열에서 중복 요소 제거
+        const numbers = [1, 2, 2, 3, 4, 4, 5];
+       
+        const filterNumbers = numbers.filter((value, index, array) => {
+            return array.indexOf(value) == index;
+        });
+
+        console.log(filterNumbers.join(','))
+
+        console.log('---------------------');
+
+        const filterNumbers1 = [...new Set(numbers)];
+        console.log(filterNumbers.sort().join(','))
+
+        console.log('---------------------');
+
+
+    </script>
+</body>
+</html>

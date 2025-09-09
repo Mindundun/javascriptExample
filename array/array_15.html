@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of Built-in object (Array)</title>
+</head>
+<body>
+    <script>        
+        
+        // 1. 배열에서 중복 요소 제거
+        const str = 'apple';
+
+        const filteredStr = str.split('').filter(value => {
+            return 'aeiou'.includes(value.toLowerCase());
+        });
+
+        console.log(filteredStr.join(','));
+        console.log(filteredStr.length);
+        
+    </script>
+</body>
+</html>
