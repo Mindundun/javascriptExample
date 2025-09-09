@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of JavaScript Event Delegation</title>
+    <style>
+        #div1{
+            width: 500px;
+            height: 500px;
+            background-color: blue;
+        }
+        #div2{
+            width: 300px;
+            height: 300px;
+            background-color: aqua;
+            position: relative;
+            top: 100px;
+            left: 100px;
+        }
+        #div3{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(229, 255, 0);
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>  
+
+    <div id="div1">
+        <div id="div2">
+            <div id="div3">
+            </div>
+        </div>
+    </div>
+    <script>
+        const div1 = document.getElementById("div1");
+        const div2 = document.getElementById("div2");
+        const div3 = document.getElementById("div3");
+
+        // dufault는 false로 bubbling 방식임
+        div1.addEventListener('click', (e) => {
+            console.log(e.target.id);           // 누른 div id
+            console.log(e.currentTarget.id);    // 무조건 div1의 id : 이벤트 리스너가 실행된 영역
+
+            if (e.target.id == "div3") {
+                e.target.style.backgroundColor = "pink";
+            } else if (e.target.id == "div2") {
+                e.target.style.backgroundColor = "red";
+
+            } else {
+                e.target.style.backgroundColor = "green";
+            }
+        });        
+
+    </script>
+</body>
+</html>

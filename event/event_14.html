@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of JavaScript Event 기본 이벤트 동작</title>
+</head>
+<body>  
+    <form id="loginForm" action="https://www.google.com" method="POST">
+        <!-- 아래와 같이 코딩 시 id 입력 후 엔터 시 google로 넘어가짐 -->
+        id : <input type="text" name ="userId" id ="userId"/> <br/> 
+        pwd : <input type="password" name ="pwd" id ="pwd"/> <br/>
+        <!-- submit은 무조건 해당 action으로 이동 -->
+        <button id ="btn" type="submit">로그인</button> 
+    </form>
+    <script>
+        
+        const btn = document.getElementById("btn");
+        const loginForm = document.getElementById("loginForm");
+
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            const userId = document.getElementById("userId").value.trim();
+            const pwd = document.getElementById("pwd").value.trim();
+
+            if (userId === '' || pwd === ''){
+                alert("아이디와 비밀번호를 정확히 입력하세요.");
+                return;
+            } 
+            
+            loginForm.submit();
+            
+        });
+
+    </script>
+</body>
+</html>

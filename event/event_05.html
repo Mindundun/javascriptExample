@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of JavaScript Event Handler</title>
+</head>
+<body>  
+    
+    <button type="button" id="btn">Click</button> 
+
+    <script>
+
+        const btn = document.getElementById("btn");
+
+        btn.addEventListener("click", function (e) {
+            console.log('this : ', this);                                  // this :  <button type=​"button" id=​"btn">​Click​</button>​    
+            console.log('이벤트 유형 : ', e.type);                           // 이벤트 유형 :  click
+            console.log('이벤트가 발생한 요소 : ', e.target);                  // 이벤트가 발생한 요소 :  <button type=​"button" id=​"btn">​Click​</button>​
+
+            console.log('이벤트 리스너가 등록된 요소 : ', e.currentTarget);     // 이벤트 리스너가 등록된 요소 :  <button type=​"button" id=​"btn">​Click​</button>​
+            console.log('이벤트 요소의 id : ', this.id);                      // 이벤트 요소의 id :  btn
+            console.log('이벤트가 발생한 요소의 id : ', e.target.id);          // 이벤트가 발생한 요소의 id :  btn
+        }, false);
+
+    </script>
+</body>
+</html>

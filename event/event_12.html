@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of JavaScript Event 기본 이벤트 동작</title>
+
+</head>
+<body>  
+    <a href="https://www.google.com">Google</a>
+    <script>
+        const aElement = document.querySelector('body > a'); // 바디 밑 자식 요소 중 a 태그 선택
+
+        aElement.addEventListener("click", (e) => {
+            console.log("call click");
+            e.preventDefault(); // 이벤트의 기본 동작을 중지함 : 링크 이동을 중지함
+        });
+
+    </script>
+</body>
+</html>

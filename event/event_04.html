@@ -11,9 +11,16 @@
         // DOM요소 객체의 이벤트 핸들러프로퍼티에 설정
         window.onload = function () {
             //HTML 문서와 문서에 포함된 외부 리소스(css, js, image)가 로딩이 완료되었을 때 실행된다.
-            console.log("call load event!"); 
-            
+            console.log("call load event!");             
         }
+
+        // DOM요소 객체에 이벤트 리스너를 등록 ( 표준 )
+        document.addEventListener('DOMContentLoaded', function () {
+            // DOM tree가 생성이 완료되었을 때 실행된다.
+            console.log("call DOMContentLoaded event!");            
+        },false); // default : false
+
+        // 밑의 DOMContentLoaded가 먼저 실행되고 이후의 위의 로직이 실행된다.
 
     </script>
 </body>
