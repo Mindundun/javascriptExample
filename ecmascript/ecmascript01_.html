@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of ECMAScript</title>
+</head>
+<body>  
+    <script>
+        //Default Function Parameter
+
+        function hello(username = "민둔둔"){
+            //ECMA 지원 전 디폴트 세팅 ( || )
+            //username = username || "민둔둔";
+            console.log(username);        
+        }
+
+        hello();             // 민둔둔 
+        hello("Mindun");     // Mindun
+
+    </script>
+</body>
+</html>
