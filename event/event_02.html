@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of JavaScript Event Handler</title>
+</head>
+<body>  
+    <!-- 인라인 방식으로 이벤트 핸들러 등록 -->
+    <!-- 반드시 event로 넣어줘야 함 -->
+    <button type="button" onclick="hello(event);">Click</button> 
+    <script>
+
+        // 이벤트 객체 전달
+        function hello(e) {
+            console.log('this : ', this);                              // this :  Window {window: Window, self: Window, document: document, name: '', location: Location, …} 
+            console.log('이벤트 유형 : ', e.type);                       //이벤트 유형 :  click
+            console.log('이벤트 요소 : ', e.target);                     // 이벤트 요소 :  <button type=​"button" onclick=​"hello(event)​;​">​Click​</button>​
+            console.log('이벤트 리스너가 등록된 요소 : ', e.currentTarget); // 이벤트 요소 :  <button type=​"button" onclick=​"hello(event)​;​">​Click​</button>​
+        }
+
+    </script>
+</body>
+</html>
