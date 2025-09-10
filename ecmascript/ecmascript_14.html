@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of ECMAScript</title>
+</head>
+<body>  
+    <script>
+        var people = [
+            {
+                name: 'Mike Smith',
+                family: {
+                    mother: "Jane Smith",
+                    father: "Harry Smith"
+                }
+            },
+            {
+                name: 'Tome Jones',
+                family: {
+                    mother: "Norah Jones",
+                    father: "Richard Jones"
+                }
+            }
+        ];
+
+        for (let { name, family: { mother } } of people) {
+            console.log(`Name : ${name}, mother : ${mother}`);
+            // Name : Mike Smith, mother : Jane Smith
+            // Name : Tome Jones, mother : Norah Jones
+            // 위에 2구문 출력
+        }
+    </script>
+</body>
+</html>

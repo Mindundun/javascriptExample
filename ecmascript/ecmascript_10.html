@@ -15,11 +15,24 @@
             age  : 20
         };
 
-        const clonedUser = {...user};
+        // user의 데이터 복제와 email 속성 추가
+        // 기존 user에 존재하는 name 프로퍼티를 John으로 업데이트
+        const clonedUser = {...user, email : "java@gmail.com", name : "John"}; // const clonedUser = user; 는 얕은 복사 : clonedUser의 데이터 변경 시 기존 user의 데이터도 변경된다.
 
         console.log(`name : ${user.name}, age : ${user.age}`);              // name : Mindun, age : 20
-        console.log(`name : ${clonedUser.name}, age : ${clonedUser.age}`);  // name : Mindun, age : 20
+        console.log(`name : ${clonedUser.name}, age : ${clonedUser.age}`);  // name : John, age : 20
         // -> 둘 다 같은 값 출력 (객체 복제)
+
+        clonedUser.age = 30;
+        
+        console.log(`name : ${user.name}, age : ${user.age}`);              // name : Mindun, age : 20
+        console.log(`name : ${clonedUser.name}, age : ${clonedUser.age}`);  // name : John, age : 30
+        // => 깊은 복사이기에 clonedUser의 age만 변경
+
+        console.log(`name : ${clonedUser.name}, age : ${clonedUser.age}, email : ${clonedUser.email}`); // name : John, age : 30, email : java@gmail.com
+        
+        console.log(user);       // {name: 'Mindun', age: 20}
+        console.log(clonedUser); // {name: 'John', age: 30, email: 'java@gmail.com'}        
         
     </script>
 </body>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of ECMAScript</title>
+</head>
+<body>  
+    <script>
+        // Spread operator
+        // 베열 복제
+
+        const intArr = [1, 2, 3, 4, 5];
+        
+        const clonedIntArr = [...intArr];
+
+        clonedIntArr[0] = 10;
+        
+        console.log(intArr.join(','));          // 1,2,3,4,5
+        console.log(clonedIntArr.join(','));    // 10,2,3,4,5        
+        
+        // 배열 병합
+
+        const arr1 = intArr.concat(clonedIntArr);
+        const arr2 = [...intArr, ...clonedIntArr];
+
+        console.log('arr1 : ', arr1.join(',')); // arr1 :  1,2,3,4,5,10,2,3,4,5
+        console.log('arr2 : ', arr2.join(',')); // arr1 :  1,2,3,4,5,10,2,3,4,5
+        
+    </script>
+</body>
+</html>
