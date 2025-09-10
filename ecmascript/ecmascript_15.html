@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of ECMAScript</title>
+</head>
+<body>  
+    <script>
+        
+        // Object Destructuring 
+
+        function printPeople({name, family : {father}}){
+            // 이름과 father name
+            console.log(`name : ${name}, father : ${father}`); // name : Mike Smith, father : Harry Smith
+        }
+
+        const people = {
+            name : "Mike Smith",
+            family : {
+                mother : "Jane Smith",
+                father : "Harry Smith"
+            }
+        }
+
+        printPeople(people);
+
+    </script>
+</body>
+</html>
