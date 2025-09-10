@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework02</title>
+</head>
+<body>      
+    <script>    
+        // [문제1]
+        // 1. 배열에서 중복 요소 제거하기
+        const numbers11 = [1, 2, 2, 3, 4, 4, 5];
+        const filteredNumber = numbers11.filter((value, index, array) => {
+            return array.indexOf(value) == index;
+        });
+
+        console.log(filteredNumber.join(','));        
+
+        console.log('---------------------------------');        
+
+        // 2. 배열의 모든 요소 합산하기 (sumArray 함수)
+        // const numbers = [10, 20, 30, 40, 50];
+
+        const numbers = [10, 20, 30, 40, 50];
+
+        let sumArray = numbers.reduce((prev, curr, index) => {
+            return prev + curr;
+        }, 0);
+
+        console.log(sumArray);
+        
+        
+        console.log('---------------------------------');       
+
+        // 3. 배열에서 특정 조건에 맞는 요소 필터링하기
+        // 주어진 배열에서 50보다 큰 숫자만 포함하는 새로운 배열을 반환하는 filterNumbers 함수를 작성하시오.
+        // const numbers = [10, 65, 30, 80, 45, 99];
+
+        const numbers1 = [10, 65, 30, 80, 45, 99];
+        
+        const result = numbers1.filter(num => {
+            return num >= 50;
+        });
+
+        console.log(result.join(','));        
+        
+        console.log('---------------------------------');   
+
+        //4. 문자열 배열을 모두 대문자로 변환하기 (toUpperCaseArray)
+        //// 객체 배열에서 특정 속성(age)만 추출
+        // const users = [
+        //       { name: 'Alice', age: 20 },
+        //       { name: 'Bob', age: 25 }
+        // ];
+
+        const users = [
+              { name: 'Alice', age: 20 },
+              { name: 'Bob', age: 25 }
+        ];
+        
+        const toUpperCaseArray = users.map(user => user.name.toUpperCase());
+
+        console.log(toUpperCaseArray);
+        
+        console.log('---------------------------------');   
+        
+        //     5. 나이를 기준으로 객체 배열 정렬하기 (sortByAge 함수)  Array 객체의 sort 메소드 사용
+        //     const users = [
+        //         { name: 'Alice', age: 30 },
+        //         { name: 'Bob', age: 25 },
+        //         { name: 'Charlie', age: 35 }
+        //     ];
+    
+        const users1 = [
+                 { name: 'Alice', age: 30 },
+                 { name: 'Bob', age: 25 },
+                 { name: 'Charlie', age: 35 }
+             ];
+
+        const sortByAge = users1.sort((a, b) => a.age - b.age);
+
+        console.log(sortByAge);
+        
+    </script>
+</body>
+</html>
