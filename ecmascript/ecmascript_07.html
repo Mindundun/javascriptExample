@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of ECMAScript</title>
+</head>
+<body>  
+    <script>
+        // Object Literal Syntax Extension
+        // 객체 리터럴을 더 간결하고 편리하게 작성할 수 있도록 확장된 문법
+        // 프로퍼티 축약
+        function createUser(username, age){
+            return {        // 중괄호 : 객체
+                username,   //username : username,  // 이름이 같다면 이와 같이 처리 가능
+                age,        //age : age
+                toSring () {//toString : function () { // 메소드 축약
+                    return `username : ${this.username}, age : ${user.age}`;
+                }
+            };
+        }
+
+        const user = createUser('Alice', 10);
+        console.log(toString.call(user));                               // [object Object]
+        console.log(`username : ${user.username}, age : ${user.age}`);  // username : Alice, age : 10
+
+        console.log(user.toString());                                   // username : Alice, age : 10
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of ECMAScript</title>
+</head>
+<body>  
+    <script>
+        // Template literal
+
+        const user = {
+            username : 'Mindun',
+            isMarried : false
+        };
+        
+        console.log(`username : ${user.username}, isMarried : ${user.isMarried}`); // username : Mindun, isMarried : false 출력
+        console.log(`결혼여부 : ${user.isMarried ? '기혼' : '미혼'}`);  // 삼항연산자(표현식) => 결혼여부 : 미혼 출력
+        
+    </script>
+</body>
+</html>

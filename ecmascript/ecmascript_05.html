@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of ECMAScript</title>
+</head>
+<body>  
+    <button id="btn" type="button">Click</button>
+    <script>
+        // Arrow function을 사용하면 안되는 경우
+
+        const btn = document.getElementById("btn");
+
+        // btn.addEventListener("click", function(e) {
+        //     console.log("this : ", this);       // btn의 DOM Element 객체 (button 태그)출력 : this :  <button id=​"btn" type=​"button">​Click​</button>​
+        //     console.log("target : ", e.target); // target :  <button id=​"btn" type=​"button">​Click​</button>​
+        //     console.log(this === e.target);     // true
+        //     console.log(this.id);               // btn
+        //     console.log(e.target.id);           // btn
+        // }, false);
+        
+        btn.addEventListener("click", (e) => {
+            console.log("this : ", this);       // Window 객체 출력 : this :  Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+            console.log("target : ", e.target); // target :  <button id=​"btn" type=​"button">​Click​</button>​
+            console.log(e.target.id);           // btn
+        })
+        
+    </script>
+</body>
+</html>

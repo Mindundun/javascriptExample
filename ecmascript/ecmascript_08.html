@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of ECMAScript</title>
+</head>
+<body>  
+    <script>
+        // Object Literal Syntax Extension
+        // 객체 리터럴을 더 간결하고 편리하게 작성할 수 있도록 확장된 문법
+        // 프로퍼티 계산된 이름
+
+        const lastName = "last name";
+
+        const user = {  // 프로퍼티에 동일한 이름을 등록 시 업데이트.
+            "first name" : "Nicholas",
+            [lastName] : "Zakas",
+            "first name" : "Mindundun"  // firstname : Mindundun, lastName : Zakas
+        }
+        
+        console.log(`firstname : ${user['first name']}, lastName : ${user['last name']}`); // firstname : Nicholas, lastName : Zakas
+        console.log(`firstname : ${user['first name']}, lastName : ${user[lastName]}`); // firstname : Nicholas, lastName : Zakas        
+        
+    </script>
+</body>
+</html>

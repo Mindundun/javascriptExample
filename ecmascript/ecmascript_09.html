@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of ECMAScript</title>
+</head>
+<body>  
+    <script>
+        // Spread operator
+        
+        function myFunc(x, y, z) {
+            console.log(`x : ${x}, y : ${y}, z : ${z}`);
+            
+            return x + y + z;
+        }
+
+        let intArr = [1, 2, 3];
+        let result = myFunc(...intArr);
+
+        console.log(result);    // x : 1, y : 2, z : 3 와!!!! 6 출력!!!!
+        
+
+        intArr = [1, 2];
+        result = myFunc(...intArr);
+
+        console.log(result);    // x : 1, y : 2, z : undefined 와!!!! NaN 출력!!!! : default value를 하면 해결 function myFunc(x = 0, y = 0, z = 0) {
+        
+    </script>
+</body>
+</html>

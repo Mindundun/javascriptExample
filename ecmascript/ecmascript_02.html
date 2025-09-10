@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of ECMAScript</title>
+</head>
+<body>  
+    <script>
+        // 함수의 매개변수가 가변적일 때
+        function  add() {
+            // console.log(arguments.length);          // 각 함수 매개변수의 갯수 출력. 즉, 2와 3 출력
+            // console.log(Array.isArray(arguments));  // false 출력
+
+            // let total = 0;
+            // for (let i = 0; i < arguments.length; i++) {
+            //     total += arguments[i];
+            // }
+            // return total;
+
+            const arr = Array.from(arguments);  // arguments를 배열로 만듬
+            console.log(Array.isArray(arr));    // 배열 여부 확인 => true 출력
+            
+            return arr.reduce((prev, curr, index) => {
+                return prev + curr;
+            }, 0);
+        }
+
+        let result = add(1, 2);
+        console.log("add(1, 2) : ", result);        // add(1, 2) :  3 출력
+        
+        
+        result = add(1, 2, 3);
+        console.log("add(1, 2, 3)) : ", result);    // add(1, 2, 3)) :  6 출력
+    </script>
+</body>
+</html>
