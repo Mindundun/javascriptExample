@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of Asyncronous</title>
+</head>
+<body>  
+    <script>
+        
+        // 동기식 처리
+        // a - 2초 대기 -> c 순으로 처리
+
+        console.log("a 작업");
+        
+        const start = Date.now();
+        while(Date.now() - start <= 2000 ) { // 2초
+            // 2초 동안 대기          
+        }
+
+        console.log("c 작업");        
+
+    </script>
+</body>
+</html>

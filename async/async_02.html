@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of Asyncronous</title>
+</head>
+<body>  
+    <script>
+        
+        // 비동기식 처리
+        // setTimeout(func, 시간)
+
+        // a -> c -> 비동기 작업 완료 순으로 처리
+        
+        console.log("a 작업");
+
+        setTimeout(() => {
+            console.log("비동기 작업 완료");            
+        }, 2000);
+
+        console.log("c 작업");
+    </script>
+</body>
+</html>

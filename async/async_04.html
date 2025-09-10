@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of Asyncronous</title>
+</head>
+<body>  
+    <script>
+        
+        // async 와 await
+        function fetchData(){
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const isSuccess = true;
+                    if (isSuccess) {
+                        resolve("데이터 도착");
+                    } else {
+                        reject("에러")
+                    }
+                }, 2000);
+            });
+        }
+
+        const getData = async () => {
+            console.log("데이터 요청");
+            
+            try {
+                const result = await fetchData(); // await는 async 와 짝꿍!이고 await 뒤에는 비동기 작업처리가 와야하며, 해당 작업은 Promise객체를 반환함
+                console.log('result : ', result); // 위의 resolve의 데이터 도착 데이터              
+            } catch (error) {
+                console.log('error : ', error);   // 위의 reject의 에러 데이터
+            }
+        }
+
+        getData();
+
+    </script>
+</body>
+</html>

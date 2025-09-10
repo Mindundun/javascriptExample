@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of Asyncronous</title>
+</head>
+<body>  
+    <script>
+        
+        // 1. 비동기 작업 시 Promise 객체 생성 : pending 상태
+        const myPromise = new Promise((resolve, reject) => {
+            const isSuccess = true;
+            // 비동기 작업
+            // 완료 시 서버에서 응답된 결과를 반환 받아야 함
+            setTimeout(() => {
+                if (isSuccess) {
+                    resolve('비동기 작업 성공!!');  // fullfilled 상태
+                } else {
+                    reject('비동기 작업 실패!!');   // rejected 상태
+                }
+            }, 2000); // 2초 경과 후 결과를 가져옴
+        });
+
+        // resolve, reject는 모두 Promise 객체를 반환함
+        myPromise
+            .then(result => {   // resolve의 결과는 then으로 받음
+                console.log("result : ", result);            
+            })
+            .catch(error => {   // reject의 결과는 catch로 받음
+                console.log("error : ",error);            
+            });
+
+    </script>
+</body>
+</html>
